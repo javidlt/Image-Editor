@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editor</title>
+    <link rel="icon" href="./images/gradient.png" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/solid.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/thinline.css">
+</head>
+<body>
+    <div id="left-panel" class="panel">
+        <div class="header-container">
+            <div class="header">
+                <div class="header_logo">
+                    <a href="index.html">
+                        <div class="circle_logo"></div>
+                        
+                    </a>
+                    <h1>imgitor</h1>
+                </div>
+                <button class="icon" id="icon">
+                    <!--  -->
+                    <i class="uil uil-moon-eclipse"></i> 
+                </button>
+            </div>
+        </div>
+        <div class="left_side">
+
+
+            <div class="left-content-container">
+            
+            <div class="left_content">
+            
+                <div class="choose_zone">
+            
+                    <div id="dropimgzone" class="img_drop_zone">
+                        <p>Drop an image here</p>
+                    </div>
+            
+                    <label>
+                        Upload Image
+                        <div id="browseimgzone" class="input"></div>
+                        <!-- <input type="file"id="browseimgzone" class="input" ></input> -->
+                    </label>
+                </div>
+            
+            </div>
+           </div>
+           <div class="left_side_bottom">
+               <div class="img_container">
+                    <div class="img_display_zone">
+                        <div id="img_zone" class="img_display"></div>
+                    </div>
+               </div>
+           </div>
+        </div>
+    </div>
+    <div id="right-panel" class="panel">
+        <div class="circle1"></div>
+        <div class="figure2"></div>
+        <div class="glass1">
+            <div class="right-content">
+                <div class="right-content-header">
+                    <h1>.Tools</h1>
+                </div>
+                <div class="right-content-container">
+                    <div class="img-filters">
+                        <p>Red tone</p>
+                        <label for="red-slider">
+                            <input id="red-slider" class="range" type="range" value="0" min="-100" max="100">
+                        </label>
+                        <p>Green tone</p>
+                        <label for="green-slider">
+                           
+                            <input id="green-slider" class="range" type="range" value="0" min="-100" max="100">
+                        </label>
+                        <p>Blue tone</p>
+                        <label for="blue-slider">
+                            <input id="blue-slider" class="range" type="range" value="0" min="-100" max="100">
+                        </label>
+                        <p>Brightness</p>
+                        <label for="brightness-slider"> 
+                            <input id="brightness-slider" class="range" type="range" value="0" min="-100" max="100">
+                        </label>
+                        <!-- <div class="pre-filters" id="pre-filters">
+                            <select id="preset-filters">
+                                
+                            </select>
+                        </div> -->
+                        <div class="pre-filters" id="pre-filters">
+                            
+                            <select class="pre-"id="preset-filters">
+                                <option value="none">Filter: None</option>
+                                <option value="greyscale">Filter: Greyscale</option>
+                                <option value="black-white">Filter: Black and white</option>
+                                <option value="sc">Filter: Select a color</option>
+                            </select>
+                        </div>
+                        <div>
+                            <div class=".color-section">
+                                <p>Select a color:</p>
+                                <div id="selected-color"></div>
+                            </div>
+                            <p>Tolerance</p>
+                            <label for="tolerance-slider">
+                                <input id="tolerance-slider" class="range" type="range" value="10" min="0" max="300">
+                            </label>
+                        </div>
+                        <div class="download-button">
+                            <button id="download-button">Download Image</button>
+                        </div>
+                    <div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <script>
+        // dark mode
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function(){
+            document.body.classList.toggle("dark-mode")
+
+        }
+    </script>
+    
+    <script src="js/p5.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
